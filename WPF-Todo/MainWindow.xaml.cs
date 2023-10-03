@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Windows;
 
 namespace WPF_Todo
@@ -27,14 +28,21 @@ namespace WPF_Todo
             if (cbPriority != null && txtChore.Text != "")
             {
 
-                Todo newTodo = new(txtChore.Text);
-                Priority _priority = new(cbPriority.SelectedItem);
+                string listTodo = $"Chore: {txtChore.Text} Priority: {cbPriority.SelectedItem}";
 
-                lstTodos.Items.Add(newTodo.GetChores());
+                lstTodos.Items.Add(listTodo);
 
                 txtChore.Clear();
+                cbPriority.SelectedItem = null;
 
 
+            }
+            else
+            {
+                SoundPlayer soundPlayer = new SoundPlayer();
+                soundPlayer.Play();
+
+                MessageBox.Show("Some or many inputs are empty!");
             }
 
         }
