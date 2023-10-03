@@ -24,11 +24,11 @@ namespace WPF_Todo
         {
 
 
-            if (cbPriority != null || txtChore.Text != "")
+            if (cbPriority != null && txtChore.Text != "")
             {
 
                 Todo newTodo = new(txtChore.Text);
-                string? _priority = cbPriority!.SelectedItem as string;
+                Priority _priority = new(cbPriority.SelectedItem);
 
                 lstTodos.Items.Add(newTodo.GetChores());
 
