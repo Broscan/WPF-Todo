@@ -3,11 +3,11 @@ using System.Windows;
 
 namespace WPF_Todo
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -18,8 +18,24 @@ namespace WPF_Todo
             }
         }
 
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+
+            if (cbPriority != null || txtChore.Text != "")
+            {
+
+                Todo newTodo = new(txtChore.Text);
+                string? _priority = cbPriority!.SelectedItem as string;
+
+                lstTodos.Items.Add(newTodo.GetChores());
+
+                txtChore.Clear();
+
+
+            }
 
         }
     }

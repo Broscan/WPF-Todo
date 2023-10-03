@@ -9,14 +9,21 @@
     }
     internal class Todo
     {
+        private readonly string chore;
 
-        string Name { get; set; }
+        public Todo(string chore)
+        {
+            this.chore = chore;
+
+        }
 
         Priority _priority { get; set; }
 
-        private readonly string thingsTodo;
+        public string GetChores()
+        {
+            return $"Chore: {chore} - Priority: {_priority} ";
 
-
-
+        }
     }
+
 }

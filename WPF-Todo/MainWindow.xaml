@@ -10,8 +10,9 @@
         <ComboBox Name ="cbPriority"  HorizontalAlignment="Left" Margin="306,133,0,0" VerticalAlignment="Top" Width="158" Height="36"/>
         <TextBlock HorizontalAlignment="Left" Margin="122,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="64" FontSize="18"><Run Language="sv-se" Text="TODO"/></TextBlock>
         <ListView Name ="lstTodos" Margin="609,30,61,74"/>
-        <TextBox HorizontalAlignment="Left" Margin="59,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="44" TextChanged="TextBox_TextChanged"/>
+        <TextBox Name ="txtChore"  HorizontalAlignment="Left" Margin="59,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="44" FontSize="16"></TextBox>
         <TextBlock HorizontalAlignment="Left" Margin="352,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="66" FontSize="18"><Run Language="sv-se" Text="Priority"/></TextBlock>
+        <Button Content="Add Chore" HorizontalAlignment="Left" Margin="198,237,0,0" VerticalAlignment="Top" Height="66" Width="166" FontSize="18" Click="Button_Click"/>
 
     </Grid>
 </Window>
